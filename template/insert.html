@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Add Employee Detail</title>
+</head>
+<body>
+    <center>
+        <h1>Employers Database</h1>
+        <hr/>
+        <form method="POST">
+            <table border="1">
+                <tr>
+                    <td>Employee Name</td>
+                    <td><input type="text" placeholder="Enter Employee Name" name="emp_name"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="text" placeholder="Enter Age" name="emp_age"></td>
+                </tr>
+                <tr>
+                    <td>Department</td>
+                    <td><input type="text" placeholder="Enter Department" name="emp_dept"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" placeholder="Enter Email id" name="emp_email"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="text" placeholder="Enter your Gender" name="emp_gender"></td>
+                </tr>
+                   
+            </table>
+            {% if messages %}
+            {% for mess in messages %}
+            <b style="color: rgb(43, 34, 170)">{{mess}}</b>
+            {% endfor %}
+            {% endif %}
+        </form>
+    </center>
+</body>

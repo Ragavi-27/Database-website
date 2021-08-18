@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lan="en">
+	<style>
+		.center{
+		  
+		  padding-top: 70px ;
+		  padding-bottom:180px;
+		  text-align: center;
+		  border: 10px solid purple;
+		  background-color: pink;
+		  
+		}
+		box{
+			width:150px;
+			padding: 30px;
+			top: 50%;
+			left: 50%;
+			background: black(0,0,0,0.4);
+			text-align: center;
+		
+		}
+		.box h1{
+			color: black;
+			text-transform: uppercase;
+			font-weight: 700;
+		text-align: center;
+		
+		}
+		.box input[type="text"],.box input[type="password"]{
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 3px solid blue;
+			padding-top: 14px;
+			padding-bottom:10px;
+			width: 220px;
+			outline: none;
+			color: black;
+			border-radius: 24px;
+			transition: 0.25px;
+		}
+		
+		.box input[type="text"]:focus,.box input[type="password"]:focus{
+			width: 270px;
+			border-color: chocolate;
+		}
+		.box input[type="submit"]{
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 3px solid blue;
+			padding: 14px 35px ;
+			outline: none;
+			color: black;
+			border-radius: 24px;
+			transition: 0.25px;
+			cursor: pointer;
+		
+		}
+		
+		.box input[type="submit"]:hover{
+			background: yellow;
+		}
+		</style>
+<centre>
+<head>
+<meta charset="utf-8">
+<title>XYZ Database</title>
+</head>
+<body class="center">
+
+<form class="box" method="POST">
+    <h1>XYZ Company</h1>
+	<p class="w3-xlarge">Employee-Department Database</p>
+	
+<input type="text" name="" placeholder="Enter Employee Id" id="Username">
+<input type="password" name="" placeholder="Enter Password" id="Password">
+<input type="submit" name="" value="login" onclick="validate()">
+
+</form>
+
+</body>
+</centre>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>Database</title>
+</head>
+<style>
+    .heading {
+		background-color: pink;
+        
+	}
+    button {
+		background-color:lightcyan;
+		color: black;
+		padding: 14px 20px;
+		margin: 8px 0;
+		cursor: pointer;
+        text-decoration:bold;
+		width: 18%;
+        border: 5px solid purple
+	}
+    .center {
+            text-align: center;
+            border: 2px solid purple;
+            background:plum
+    }
+</style>
+<body class="heading">
+    <center>
+        <h1>Employers Database</h1>
+        <hr/>
+        <a href="{% url 'Insertemp' %}">
+            <button class="button">Create New Employee</button></a>
+            <table class="center" border="1">
+                <tr>
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Employee Age</th>
+                    <th>Employee Dept</th>
+                    <th>Employee Email</th>
+                    <th>Employee Gender</th>
+                </tr>
+                {% for result in data %}
+                <tr>
+                    <td>{{result.id}}</td>
+                    <td>{{result.emp_name}}</td>
+                    <td>{{result.emp_age}}</td>
+                    <td>{{result.emp_dept}}</td>
+                    <td>{{result.emp_email}}</td>
+                    <td>{{result.emp_gender}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+    </center>
+</body>
