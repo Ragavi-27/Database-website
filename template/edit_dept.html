@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>Edit Department</title>
+</head>
+<style>
+    .heading {
+		background-color: pink;
+	}
+    button {
+		background-color:lightcyan;
+		color: black;
+		padding: 14px 20px;
+		margin: 8px 0;
+		cursor: pointer;
+        text-decoration:bold;
+		width: 18%;
+        border: 5px solid purple
+	}
+    .center {
+            text-align: center;
+            border: 2px solid purple;
+            background:plum
+    }
+</style>
+<body class="heading">
+    <center>
+        <h1>Edit Department Details</h1>
+        <hr/>
+        <form method="POST" action="/Update/{{Empdept.id}}">
+       {% csrf_token %}
+        <table border="1">
+            <tr>
+                <td>Dept Id</td>
+                <td><input type="text" name="id" value="{{Empdept.id}}" readonly></td>
+            </tr>
+            <tr>
+                <td>Department Name</td>
+                <td><input type="text" name="dept_name" value="{{Empdept.dept_name}}"></td>
+            </tr>
+            <tr>
+                <td>Dept. Hod Name</td>
+                <td><input type="text" name="dept_hod" value="{{Empdept.dept_hod}}"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><input type="submit" value="Update Record"></td>
+                <td>{% if messages %}
+                    {% for mess in messages %}
+                    <b style="color: rgb(43, 34, 170)">{{mess}}</b>
+                    {% endfor %}
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+        <button class="button"><a href="{% url 'showDept' %}">Go to Home page</a></button>
+        
+        </form>
+    </center>
+</body>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>Add Department</title>
+</head>
+<style>
+.button {
+  background-color: lightblue; 
+  border: none;
+  color: pink;
+  text-align: center;
+  padding: 10px 24px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  color: black;
+  border: 2px solid blue; 
+  border-radius: 12px;
+  cursor: pointer;
+}
+    .heading {
+		background-color: pink;
+        border: 5px solid purple;
+        padding-bottom: 190px;
+        
+	}
+
+    .center {
+            text-align: center;
+            border: 2px solid rgb(128, 27, 128);
+            background:plum
+    }
+</style>
+<body class="heading">
+    <center>
+        <h1>Department Details</h1>
+        <hr/>
+        <form method="POST">
+            {% csrf_token %}
+            <table border="1" class="center">
+                <tr>
+                    <td>Department Name</td>
+                    <td><input type="text" placeholder="Enter Department Name" name="dept_name"></td>
+                </tr>
+                <tr>
+                    <td>HOD/Manager</td>
+                    <td><input type="text" placeholder="Enter manager name" name="dept_hod"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="insert"/></td>
+                    <td>{% if messages %}
+                        {% for mess in messages %}
+                        <b style="color: rgb(43, 34, 170)">{{mess}}</b>
+                        {% endfor %}
+                        {% endif %}</td>
+                </tr>
+                   
+            </table>
+            <br>
+            <button class="button"><a href="{% url 'showDept' %}">Go to Home page</a></button>
+        </form>
+    </center>
+</body>
