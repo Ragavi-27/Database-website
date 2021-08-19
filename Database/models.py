@@ -9,5 +9,13 @@ class EmpModel(models.Model):
     emp_dept=models.CharField(max_length=100)
     emp_email=models.CharField(max_length=100)
     emp_gender=models.CharField(max_length=100)
+    emp_salary=models.CharField(max_length=100)
     class Meta:
         db_table="employee"
+
+
+class Empdept(models.Model):
+    dept_name=models.CharField(max_length=100)
+    dept_hod=models.CharField(max_length=100)
+    class Meta:
+        db_table="department"
