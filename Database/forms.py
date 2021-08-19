@@ -7,3 +7,9 @@ class Empforms(forms.ModelForm):
     class Meta:
         model=EmpModel
         fields="__all__"
+        
+
+class Deptforms(forms.ModelForm):
+    class Meta:
+        model=Empdept
+        fields="__all__"
