@@ -40,7 +40,7 @@
                     <td>{{result.dept_name}}</td>
                     <td>{{result.dept_hod}}</td>
                     <td><a href="edit_dept/{{result.id}}">Edit</a></td>
-                    <td><a href="Delete_dept/{{result.dept_id}}" onclick="return confirmation('Are you sure want to Delete the Record?')">Delete</a></td>
+                    <td><a href="Delete_dept/{{result.id}}" onclick="return confirmation('Are you sure want to Delete the Record?')">Delete</a></td>
                 </tr>
                 {% endfor %}
             </table>
